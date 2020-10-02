@@ -204,6 +204,7 @@ $dispatcher = patterns('',
         url('^(?P<tid>\d+)/add-collaborator$', 'addCollaborator'),
         url_get('^(?P<tid>\d+)/collaborators/(?P<cid>\d+)/view$', 'viewCollaborator'),
         url_post('^(?P<tid>\d+)/collaborators/(?P<cid>\d+)$', 'updateCollaborator')
+        url_get('^(?P<list>\w+)/items$', 'getListItems'),
     )),
     url('^/draft/', patterns('ajax.draft.php:DraftAjaxAPI',
         url_post('^(?P<id>\d+)$', 'updateDraft'),
